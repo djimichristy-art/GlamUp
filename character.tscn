@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://ceqtjbaxu5dvm"]
+[gd_scene load_steps=3 format=3 uid="uid://ceqtjbaxu5dvm"]
+
+[ext_resource type="Texture2D" uid="uid://bx6eibdafdlhj" path="res://assets/character/Capture_d_écran_2026-03-20_105000-removebg-preview.png" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://bdhqsbx4baqxy" path="res://assets/dresses/dress1.png" id="2_wa5vi"]
 
 [node name="Character" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_pjt0s")
+
+[node name="Dress" type="Sprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.6860236, 0.6668046)
+texture = ExtResource("2_wa5vi")
+
+[node name="Shoes" type="Sprite2D" parent="."]
+position = Vector2(-833, 1000.99994)
+scale = Vector2(0.27608702, 0.38005757)
+
+[node name="Accessory" type="Sprite2D" parent="."]
+position = Vector2(5213.067, 523.8667)

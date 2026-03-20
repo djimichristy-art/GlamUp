@@ -1,23 +1,58 @@
 extends Node2D
 
-# Store references to the layers
-@onready var body = $Body
-@onready var hair = $Hair
+# --- DRESS ---
 @onready var dress = $Dress
+
+var dresses = [
+	preload("res://assets/dresses/dress1.png"),
+	preload("res://assets/dresses/dress2.png"),
+	preload("res://assets/dresses/dress3.png"),
+	preload("res://assets/dresses/dress4.png")
+]
+
+var current_dress = 0
+
+
+# --- SHOES ---
 @onready var shoes = $Shoes
+
+var shoes_list = [
+	preload("res://assets/shoes/shoe1.png"),
+	preload("res://assets/shoes/shoe2.png")
+]
+
+var current_shoes = 0
+
+
+# --- ACCESSORY ---
 @onready var accessory = $Accessory
 
-# Function to change clothing
-func change_clothes(layer_name: String, texture_path: String):
-	var tex = load(texture_path)
-	match layer_name:
-		"hair":
-			hair.texture = tex
-		"dress":
-			dress.texture = tex
-		"shoes":
-			shoes.texture = tex
-		"accessory":
-			accessory.texture = tex
-		_:
-			print("Layer not found: ", layer_name)
+var accessory_texture = preload("res://assets/accessories/accessory.png")
+var accessory_on = false
+
+
+# --- FUNCTIONS ---
+
+func change_dress():
+	current_dress += 1
+	if current_dress >= dresses.size():
+		current_dress = 0
+	
+	dress.texture = dresses[current_dress]
+
+
+func change_shoes():
+	current_shoes += 1
+	if current_shoes >= shoes_list.size():
+		current_shoes = 0
+	
+	shoes.texture = shoes_list[current_shoes]
+
+
+func change_accessory():
+	accessory_on = !accessory_on
+	
+	if accessory_on:
+		accessory.texture = accessory_texture
+	else:
+		accessory.texture = null
