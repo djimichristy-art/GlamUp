@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://danlbiaptu5oc"]
-
-[ext_resource type="Texture2D" uid="uid://3q2x6xinm2rg" path="res://assets/character/Capture_d_écran_2026-03-20_105000-removebg-preview.png" id="1_erg3g"]
-
-[node name="GlamUp" type="Node2D"]
-
-[node name="Model" type="Sprite2D" parent="."]
-texture = ExtResource("1_erg3g")
