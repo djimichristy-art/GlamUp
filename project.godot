@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="glam-up"
-run/main_scene="uid://danlbiaptu5oc"
+run/main_scene="uid://cnuyqkl53p4p"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+clothing=""
 
 [rendering]
 

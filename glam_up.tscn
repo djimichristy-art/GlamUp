@@ -1,12 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://danlbiaptu5oc"]
+[gd_scene load_steps=27 format=3 uid="uid://cnuyqkl53p4p"]
 
 [ext_resource type="Script" uid="uid://dxcsrv4ktf0f8" path="res://glam_up.gd" id="1_jd25i"]
 [ext_resource type="Texture2D" uid="uid://mcbhjmn43cgq" path="res://assets/backgrounds/pfefferminza_viktualia-flower-8625039_1920.png" id="2_3h70m"]
-[ext_resource type="PackedScene" uid="uid://ceqtjbaxu5dvm" path="res://character.tscn" id="2_khnw5"]
+[ext_resource type="PackedScene" uid="uid://cpgrcm77ovbeq" path="res://character.tscn" id="2_khnw5"]
+[ext_resource type="Texture2D" uid="uid://bdhqsbx4baqxy" path="res://assets/dresses/dress1.png" id="4_wnmk7"]
+[ext_resource type="Script" uid="uid://cbcpy7yf5kvuf" path="res://dress_1.gd" id="5_nx3ki"]
+[ext_resource type="Texture2D" uid="uid://dnqq27hakiv6q" path="res://assets/dresses/dress2.png" id="5_s8jw5"]
+[ext_resource type="Texture2D" uid="uid://da0kq44iknjfo" path="res://assets/dresses/dress4.png" id="6_gkttc"]
+[ext_resource type="Script" uid="uid://6y64td8x3qa0" path="res://dress_2.gd" id="7_8e5ce"]
+[ext_resource type="Texture2D" uid="uid://fivcf0vgqa4e" path="res://assets/dresses/dress3.png" id="7_k4n05"]
+[ext_resource type="Texture2D" uid="uid://djbge5bsqi2fi" path="res://assets/shoes/shoe1.png" id="8_0vwsw"]
+[ext_resource type="Script" uid="uid://dhkn1f51oeuux" path="res://dress_3.gd" id="9_jnrm5"]
+[ext_resource type="Texture2D" uid="uid://5m5ska1l2vl8" path="res://assets/shoes/shoe2.png" id="9_nx3ki"]
+[ext_resource type="Texture2D" uid="uid://bpi3y76v5cbwe" path="res://assets/Capture_d_écran_2026-03-20_105046-removebg-preview.png" id="10_q2ou7"]
+[ext_resource type="Script" uid="uid://rms3r30m87at" path="res://dress_4.gd" id="11_2p6ym"]
+[ext_resource type="Script" uid="uid://d3tfw0tx8xv52" path="res://shoe_1.gd" id="13_6o8qp"]
+[ext_resource type="Script" uid="uid://bch0tnj4uk1dv" path="res://shoe_2.gd" id="15_0iouk"]
+[ext_resource type="Script" uid="uid://dfo5gapndvuc6" path="res://accessory.gd" id="17_6edfx"]
+[ext_resource type="Texture2D" uid="uid://cgrsyv00sbru0" path="res://assets/Clothes/Skirt_1_opt_2.png" id="18_koifq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkttc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4n05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h07md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vwsw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx3ki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ou7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytrjb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3j8o"]
 
 [node name="GlamUp" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_jd25i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2476, 1117)
+zoom = Vector2(0.5, 0.5)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(9323, 7932)
@@ -14,59 +49,86 @@ scale = Vector2(14.350521, 8.650521)
 texture = ExtResource("2_3h70m")
 
 [node name="Character" parent="." instance=ExtResource("2_khnw5")]
+position = Vector2(2556, 1248)
 
-[node name="DressButton1" type="Button" parent="."]
-offset_left = 703.0
-offset_top = -239.0
-offset_right = 764.0
-offset_bottom = -208.0
-theme_override_font_sizes/font_size = 35
-text = "Dress1"
+[node name="Dress1" type="Sprite2D" parent="."]
+position = Vector2(2950, 1144)
+scale = Vector2(0.6555117, 0.6812914)
+texture = ExtResource("4_wnmk7")
+script = ExtResource("5_nx3ki")
 
-[node name="DressButton2" type="Button" parent="."]
-offset_left = 703.0
-offset_top = -148.0
-offset_right = 826.0
-offset_bottom = -91.0
-theme_override_font_sizes/font_size = 35
-text = "Dress2"
+[node name="Area2D" type="Area2D" parent="Dress1"]
 
-[node name="DressButton3" type="Button" parent="."]
-offset_left = 700.0
-offset_top = -67.0
-offset_right = 823.0
-offset_bottom = -10.0
-theme_override_font_sizes/font_size = 35
-text = "Dress3"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress1/Area2D"]
+shape = SubResource("RectangleShape2D_gkttc")
 
-[node name="DressButton4" type="Button" parent="."]
-offset_left = 697.0
-offset_top = 13.0
-offset_right = 820.0
-offset_bottom = 70.0
-theme_override_font_sizes/font_size = 35
-text = "Dress4"
+[node name="Dress2" type="Sprite2D" parent="."]
+position = Vector2(2956, 1522)
+texture = ExtResource("5_s8jw5")
+script = ExtResource("7_8e5ce")
 
-[node name="ShoeButton1" type="Button" parent="."]
-offset_left = 915.0
-offset_top = -151.0
-offset_right = 1026.0
-offset_bottom = -94.0
-theme_override_font_sizes/font_size = 35
-text = "Shoe1"
+[node name="Area2D" type="Area2D" parent="Dress2"]
 
-[node name="ShoeButton2" type="Button" parent="."]
-offset_left = 914.0
-offset_top = -61.0
-offset_right = 1025.0
-offset_bottom = -4.0
-theme_override_font_sizes/font_size = 35
-text = "Shoe2"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress2/Area2D"]
+shape = SubResource("RectangleShape2D_k4n05")
 
-[node name="AccessoryButton" type="Button" parent="."]
-offset_left = 1086.0
-offset_top = -98.0
-offset_right = 1261.0
-offset_bottom = -41.0
-theme_override_font_sizes/font_size = 35
-text = "Accessory"
+[node name="Dress3" type="Sprite2D" parent="."]
+position = Vector2(3252, 1033)
+texture = ExtResource("6_gkttc")
+script = ExtResource("9_jnrm5")
+
+[node name="Area2D" type="Area2D" parent="Dress3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress3/Area2D"]
+shape = SubResource("RectangleShape2D_h07md")
+
+[node name="Dress4" type="Sprite2D" parent="."]
+position = Vector2(3252, 1325)
+texture = ExtResource("7_k4n05")
+script = ExtResource("11_2p6ym")
+
+[node name="Area2D" type="Area2D" parent="Dress4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress4/Area2D"]
+shape = SubResource("RectangleShape2D_0vwsw")
+
+[node name="Shoe1" type="Sprite2D" parent="."]
+position = Vector2(3216, 1535)
+texture = ExtResource("8_0vwsw")
+script = ExtResource("13_6o8qp")
+
+[node name="Area2D" type="Area2D" parent="Shoe1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shoe1/Area2D"]
+shape = SubResource("RectangleShape2D_nx3ki")
+
+[node name="Shoe2" type="Sprite2D" parent="."]
+position = Vector2(3455, 974)
+texture = ExtResource("9_nx3ki")
+script = ExtResource("15_0iouk")
+
+[node name="Area2D" type="Area2D" parent="Shoe2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shoe2/Area2D"]
+shape = SubResource("RectangleShape2D_q2ou7")
+
+[node name="Accessory" type="Sprite2D" parent="."]
+position = Vector2(3494, 1179)
+texture = ExtResource("10_q2ou7")
+script = ExtResource("17_6edfx")
+
+[node name="Area2D" type="Area2D" parent="Accessory"]
+position = Vector2(12, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Accessory/Area2D"]
+shape = SubResource("RectangleShape2D_ytrjb")
+
+[node name="Dress5" type="Sprite2D" parent="."]
+position = Vector2(3537.0002, 1336)
+scale = Vector2(0.22581428, 0.20799436)
+texture = ExtResource("18_koifq")
+
+[node name="Area2D" type="Area2D" parent="Dress5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress5/Area2D"]
+shape = SubResource("RectangleShape2D_c3j8o")
