@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cnuyqkl53p4p"]
+[gd_scene load_steps=33 format=3 uid="uid://cnuyqkl53p4p"]
 
 [ext_resource type="Script" uid="uid://dxcsrv4ktf0f8" path="res://glam_up.gd" id="1_jd25i"]
 [ext_resource type="Texture2D" uid="uid://mcbhjmn43cgq" path="res://assets/backgrounds/pfefferminza_viktualia-flower-8625039_1920.png" id="2_3h70m"]
@@ -6,34 +6,46 @@
 [ext_resource type="Texture2D" uid="uid://bdhqsbx4baqxy" path="res://assets/dresses/dress1.png" id="4_wnmk7"]
 [ext_resource type="Script" uid="uid://cbcpy7yf5kvuf" path="res://dress_1.gd" id="5_nx3ki"]
 [ext_resource type="Texture2D" uid="uid://dnqq27hakiv6q" path="res://assets/dresses/dress2.png" id="5_s8jw5"]
+[ext_resource type="Script" uid="uid://dgh2qet4glf1m" path="res://area_2dD1.gd" id="6_24rpf"]
 [ext_resource type="Texture2D" uid="uid://da0kq44iknjfo" path="res://assets/dresses/dress4.png" id="6_gkttc"]
+[ext_resource type="Script" uid="uid://8ls7xk6fta02" path="res://area_2_daccessory.gd" id="7_6edfx"]
 [ext_resource type="Script" uid="uid://6y64td8x3qa0" path="res://dress_2.gd" id="7_8e5ce"]
 [ext_resource type="Texture2D" uid="uid://fivcf0vgqa4e" path="res://assets/dresses/dress3.png" id="7_k4n05"]
 [ext_resource type="Texture2D" uid="uid://djbge5bsqi2fi" path="res://assets/shoes/shoe1.png" id="8_0vwsw"]
 [ext_resource type="Script" uid="uid://dhkn1f51oeuux" path="res://dress_3.gd" id="9_jnrm5"]
 [ext_resource type="Texture2D" uid="uid://5m5ska1l2vl8" path="res://assets/shoes/shoe2.png" id="9_nx3ki"]
+[ext_resource type="Script" uid="uid://c12bs5tchec5o" path="res://area_2d_dress_2.gd" id="10_koifq"]
 [ext_resource type="Texture2D" uid="uid://bpi3y76v5cbwe" path="res://assets/Capture_d_écran_2026-03-20_105046-removebg-preview.png" id="10_q2ou7"]
 [ext_resource type="Script" uid="uid://rms3r30m87at" path="res://dress_4.gd" id="11_2p6ym"]
 [ext_resource type="Script" uid="uid://d3tfw0tx8xv52" path="res://shoe_1.gd" id="13_6o8qp"]
+[ext_resource type="Script" uid="uid://d3pvypapji35w" path="res://area_2d_dress_3.gd" id="13_dyg0p"]
 [ext_resource type="Script" uid="uid://bch0tnj4uk1dv" path="res://shoe_2.gd" id="15_0iouk"]
+[ext_resource type="Script" uid="uid://dwdwln25okn0b" path="res://area_2d_dress_4.gd" id="16_c3j8o"]
 [ext_resource type="Script" uid="uid://dfo5gapndvuc6" path="res://accessory.gd" id="17_6edfx"]
-[ext_resource type="Texture2D" uid="uid://cgrsyv00sbru0" path="res://assets/Clothes/Skirt_1_opt_2.png" id="18_koifq"]
+[ext_resource type="Script" uid="uid://b5oqggngc7e53" path="res://area_2d_2_shoe_1.gd" id="19_sdyc7"]
+[ext_resource type="Script" uid="uid://d3hv8ob5bgxkh" path="res://area_2d_shoe_2.gd" id="22_x7esb"]
+[ext_resource type="AudioStream" uid="uid://c36vrnikjpemm" path="res://assets/sounds/music.mp3" id="25_koifq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkttc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4n05"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h07md"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vwsw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx3ki"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ou7"]
+size = Vector2(400, 547.48975)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytrjb"]
+size = Vector2(229, 107)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3j8o"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4n05"]
+size = Vector2(250, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h07md"]
+size = Vector2(250, 249)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vwsw"]
+size = Vector2(250, 277)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx3ki"]
+size = Vector2(96, 83.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ou7"]
+size = Vector2(198, 103)
 
 [node name="GlamUp" type="Node2D"]
 position = Vector2(1, 0)
@@ -44,91 +56,98 @@ position = Vector2(2476, 1117)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(9323, 7932)
+position = Vector2(9306.999, 7945)
 scale = Vector2(14.350521, 8.650521)
 texture = ExtResource("2_3h70m")
 
 [node name="Character" parent="." instance=ExtResource("2_khnw5")]
 position = Vector2(2556, 1248)
 
-[node name="Dress1" type="Sprite2D" parent="."]
-position = Vector2(2950, 1144)
+[node name="Area2D_Dress1" type="Area2D" parent="."]
+position = Vector2(2957, 1141)
 scale = Vector2(0.6555117, 0.6812914)
+script = ExtResource("6_24rpf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Dress1"]
+position = Vector2(-4.576473, 10.274646)
+shape = SubResource("RectangleShape2D_gkttc")
+
+[node name="Dress1" type="Sprite2D" parent="Area2D_Dress1"]
 texture = ExtResource("4_wnmk7")
 script = ExtResource("5_nx3ki")
 
-[node name="Area2D" type="Area2D" parent="Dress1"]
+[node name="Area2Daccessory" type="Area2D" parent="."]
+position = Vector2(3506, 1184)
+script = ExtResource("7_6edfx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress1/Area2D"]
-shape = SubResource("RectangleShape2D_gkttc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Daccessory"]
+position = Vector2(14.5, -4.5)
+shape = SubResource("RectangleShape2D_ytrjb")
 
-[node name="Dress2" type="Sprite2D" parent="."]
-position = Vector2(2956, 1522)
-texture = ExtResource("5_s8jw5")
-script = ExtResource("7_8e5ce")
-
-[node name="Area2D" type="Area2D" parent="Dress2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress2/Area2D"]
-shape = SubResource("RectangleShape2D_k4n05")
-
-[node name="Dress3" type="Sprite2D" parent="."]
-position = Vector2(3252, 1033)
-texture = ExtResource("6_gkttc")
-script = ExtResource("9_jnrm5")
-
-[node name="Area2D" type="Area2D" parent="Dress3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress3/Area2D"]
-shape = SubResource("RectangleShape2D_h07md")
-
-[node name="Dress4" type="Sprite2D" parent="."]
-position = Vector2(3252, 1325)
-texture = ExtResource("7_k4n05")
-script = ExtResource("11_2p6ym")
-
-[node name="Area2D" type="Area2D" parent="Dress4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress4/Area2D"]
-shape = SubResource("RectangleShape2D_0vwsw")
-
-[node name="Shoe1" type="Sprite2D" parent="."]
-position = Vector2(3216, 1535)
-texture = ExtResource("8_0vwsw")
-script = ExtResource("13_6o8qp")
-
-[node name="Area2D" type="Area2D" parent="Shoe1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shoe1/Area2D"]
-shape = SubResource("RectangleShape2D_nx3ki")
-
-[node name="Shoe2" type="Sprite2D" parent="."]
-position = Vector2(3455, 974)
-texture = ExtResource("9_nx3ki")
-script = ExtResource("15_0iouk")
-
-[node name="Area2D" type="Area2D" parent="Shoe2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shoe2/Area2D"]
-shape = SubResource("RectangleShape2D_q2ou7")
-
-[node name="Accessory" type="Sprite2D" parent="."]
-position = Vector2(3494, 1179)
+[node name="Accessory" type="Sprite2D" parent="Area2Daccessory"]
+position = Vector2(6, -8)
 texture = ExtResource("10_q2ou7")
 script = ExtResource("17_6edfx")
 
-[node name="Area2D" type="Area2D" parent="Accessory"]
-position = Vector2(12, 5)
+[node name="Area2D_Dress2" type="Area2D" parent="."]
+position = Vector2(2956, 1522)
+script = ExtResource("10_koifq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Accessory/Area2D"]
-shape = SubResource("RectangleShape2D_ytrjb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Dress2"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_k4n05")
 
-[node name="Dress5" type="Sprite2D" parent="."]
-position = Vector2(3537.0002, 1336)
-scale = Vector2(0.22581428, 0.20799436)
-texture = ExtResource("18_koifq")
+[node name="Dress2" type="Sprite2D" parent="Area2D_Dress2"]
+texture = ExtResource("5_s8jw5")
+script = ExtResource("7_8e5ce")
 
-[node name="Area2D" type="Area2D" parent="Dress5"]
+[node name="Area2D_Dress3" type="Area2D" parent="."]
+position = Vector2(3252, 1033)
+script = ExtResource("13_dyg0p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress5/Area2D"]
-shape = SubResource("RectangleShape2D_c3j8o")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Dress3"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_h07md")
+
+[node name="Dress3" type="Sprite2D" parent="Area2D_Dress3"]
+texture = ExtResource("6_gkttc")
+script = ExtResource("9_jnrm5")
+
+[node name="Area2D_Dress4" type="Area2D" parent="."]
+position = Vector2(3252, 1325)
+script = ExtResource("16_c3j8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Dress4"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_0vwsw")
+
+[node name="Dress4" type="Sprite2D" parent="Area2D_Dress4"]
+texture = ExtResource("7_k4n05")
+script = ExtResource("11_2p6ym")
+
+[node name="Area2D2_Shoe1" type="Area2D" parent="."]
+position = Vector2(3216, 1535)
+script = ExtResource("19_sdyc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2_Shoe1"]
+position = Vector2(1, -12.25)
+shape = SubResource("RectangleShape2D_nx3ki")
+
+[node name="Shoe1" type="Sprite2D" parent="Area2D2_Shoe1"]
+texture = ExtResource("8_0vwsw")
+script = ExtResource("13_6o8qp")
+
+[node name="Area2D_Shoe2" type="Area2D" parent="."]
+position = Vector2(3707, 969)
+script = ExtResource("22_x7esb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Shoe2"]
+position = Vector2(-3, -4.5)
+shape = SubResource("RectangleShape2D_q2ou7")
+
+[node name="Shoe2" type="Sprite2D" parent="Area2D_Shoe2"]
+texture = ExtResource("9_nx3ki")
+script = ExtResource("15_0iouk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_koifq")

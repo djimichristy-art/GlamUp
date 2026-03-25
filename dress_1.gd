@@ -10,13 +10,15 @@ var drag_offset = Vector2.ZERO  # renamed
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_LEFT :
 			dragging = event.pressed
 			if dragging:
 				drag_offset = global_position - event.position
+			
 
 	if event is InputEventMouseMotion and dragging:
-		global_position = event.position + drag_offset
+		print("Hello bestie")
+		#global_position = event.position + drag_offset
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
