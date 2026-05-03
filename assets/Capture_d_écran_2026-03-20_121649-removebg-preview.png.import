@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vi71kxbrrcdk"
-path="res://.godot/imported/shoe2.png-42bae7672fec7ab80c33d2065b65c6b6.ctex"
+uid="uid://cld101bhldrsl"
+path="res://.godot/imported/Capture_d_écran_2026-03-20_121649-removebg-preview.png-64fd74bb391f7d5b01c6775dcc71c4fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/shoes/shoe2.png"
-dest_files=["res://.godot/imported/shoe2.png-42bae7672fec7ab80c33d2065b65c6b6.ctex"]
+source_file="res://assets/Capture_d_écran_2026-03-20_121649-removebg-preview.png"
+dest_files=["res://.godot/imported/Capture_d_écran_2026-03-20_121649-removebg-preview.png-64fd74bb391f7d5b01c6775dcc71c4fd.ctex"]
 
 [params]
 

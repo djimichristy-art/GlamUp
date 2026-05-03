@@ -16,7 +16,7 @@ func _input(event):
 				drag_offset = global_position - event.position
 
 	if event is InputEventMouseMotion and dragging:
-			print("Hello bestie")
+			print("")
 		#global_position = event.position + drag_offset
 
 func _unhandled_input(event):
